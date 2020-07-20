@@ -23,11 +23,19 @@ Commit your code regularly and meaningfully. This practice helps both you (in ca
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your answers beforehand.
 
 1. Hashing functions
+   _Hashing functions take an input of any kind (except lists), and create a unique index based on the input based on the specified algorithm, and places the value at the hashed index_
 2. Collision resolution
+   _This is done because many different inputs can have the same hashed index and you can do the following to prevent overriting indexes with new values:_
+   _1) create a linked list at each index and if you have a collision you can then iterate to the end of the linked list and place the new value_
+   _2) you can do index probing and when you find a collission, then you can "probe" the next index or if you're at the last index then check index (0)_
 3. Performance of basic hash table operations
+   _Basic hash table operations should be O(n) in time complexity_
 4. Load factor
+   _The load factor is a ratio of 0.6 which determines how "full" the hashtable is allowed to be before it needs to be resized_
 5. Automatic resizing
+   _Auto resizing is done once the hash table's load factor has reached capacity or dropped too low due to deletions. This allows for optimal usage of space_
 6. Various use cases for hash tables
+   _Hash tables are very useful tools for looking up values, but can also be used to output unique values in several lists, or provide intersections._
 
 We expect you to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
@@ -55,7 +63,7 @@ For each problem that you choose to solve, complete the following:
 - [ ] Implement your solution in the `.py` skeleton file
 - [ ] Make sure your code passes the tests running the test script with make tests
 
-*Note: For these exercises, we expect you to use Python's built-in `dict` as a hashtable. That said, if you wish, you can attempt to solve using your own hashtable implementation, as well. All solutions should utilize a `dict` or hashtable. You should not use Sets. (Though you can make a `dict` behave like a set if you wish.)*
+_Note: For these exercises, we expect you to use Python's built-in `dict` as a hashtable. That said, if you wish, you can attempt to solve using your own hashtable implementation, as well. All solutions should utilize a `dict` or hashtable. You should not use Sets. (Though you can make a `dict` behave like a set if you wish.)_
 
 ### Task 3: Stretch Goals
 
@@ -68,7 +76,6 @@ After finishing your required elements, you can push your work further. These go
 
 Follow these steps to complete your project.
 
-- [ ] Submit a Pull-Request to merge <firstName-lastName> Branch into master (student's  Repo). **Please don't merge your own pull request**
+- [ ] Submit a Pull-Request to merge <firstName-lastName> Branch into master (student's Repo). **Please don't merge your own pull request**
 - [ ] Add your team lead as a reviewer on the pull-request
 - [ ] Your team lead will count the project as complete after receiving your pull-request
-
