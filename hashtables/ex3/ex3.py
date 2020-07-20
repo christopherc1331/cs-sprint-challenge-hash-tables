@@ -8,18 +8,17 @@ def intersection(arrays):
     my_list = []
 
 
-    for list in arrays:
+    for index, list in enumerate(arrays):
         for item in list:
             if item in my_dict:
+                # if my_dict[item] == index:
                 my_dict[item] += 1
+                if my_dict[item] == arrays_count:
+                    my_list.append(item)
+                    
             else:
-                my_dict[item] = 1
-    
-    my_dict_list = my_dict.items()
-
-    for i in my_dict_list:
-        if i[1] == arrays_count:
-            my_list.append(i[0])
+                if index == 0:
+                    my_dict[item] = 1
 
     return my_list
 
@@ -29,6 +28,8 @@ def intersection(arrays):
 if __name__ == "__main__":
     arrays = []
 
+    # arrays.append(list(range(0, 10)) + [1, 2, 3])
+    # arrays.append(list(range(0, 10)) + [1, 2, 3])
     arrays.append(list(range(1000000, 2000000)) + [1, 2, 3])
     arrays.append(list(range(2000000, 3000000)) + [1, 2, 3])
     arrays.append(list(range(3000000, 4000000)) + [1, 2, 3])
